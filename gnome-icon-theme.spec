@@ -2,19 +2,19 @@ Summary:	Default icon themes for GNOME2 enviroment
 Summary(pl):	Domy¶lne motywy ikon dla ¶rodowiska GNOME2
 Name:		gnome-icon-theme
 Version:	1.1.6
-Release:	1
+Release:	2
 License:	GPL
 Group:		Themes
 Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/1.1/%{name}-%{version}.tar.bz2
 # Source0-md5:	86674ca773e28ff53b43c0c5e4207757
-Source1:	http://freedesktop.org/Software/icon-theme/releases/hicolor-icon-theme-0.2.tar.gz
-# Source1-md5:	773d97c9a2360a72d4bf772fb45523ad
 Patch0:		%{name}-DESTDIR.patch
 URL:		http://www.gnome.org/
 BuildRequires:	intltool
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	glib2-devel >= 2.3.0
+BuildRequires:	hicolor-icon-theme
+Requires:	hicolor-icon-theme
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -25,7 +25,7 @@ Default icon themes for GNOME2 enviroment.
 Domy¶lne motywy ikon dla ¶rodowiska GNOME2.
 
 %prep
-%setup -q -a1
+%setup -q
 %patch0 -p1
 
 %build
@@ -34,8 +34,7 @@ intltoolize --force
 %{__aclocal}
 %{__autoconf}
 %{__automake}
-%configure \
-	--disable-hicolor-check
+%configure 
 %{__make}
 
 %install
@@ -43,13 +42,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
-
-install hicolor-icon-theme*/index.theme $RPM_BUILD_ROOT%{_datadir}/icons/hicolor
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%{_datadir}/icons/*
+%{_datadir}/icons/hicolor/*/*/*.png
+%{_datadir}/icons/hicolor/*/stock/*/*.png
+%{_datadir}/icons/gnome
 %{_pkgconfigdir}/*.pc
