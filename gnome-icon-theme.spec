@@ -1,4 +1,4 @@
-Summary: 	Default icon themes for Gnome2 enviroment
+Summary:	Default icon themes for Gnome2 enviroment
 Summary(pl):	Domy¶lne motywy ikon dla ¶rodowiska Gnome2
 Name:		gnome-icon-theme
 Version:	1.0.6
