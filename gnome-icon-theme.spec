@@ -1,12 +1,12 @@
 Summary:	Default icon themes for GNOME2 enviroment
 Summary(pl):	Domy¶lne motywy ikon dla ¶rodowiska GNOME2
 Name:		gnome-icon-theme
-Version:	2.9.91
+Version:	2.9.92
 Release:	1
 License:	GPL
 Group:		Themes
-Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/2.9/%{name}-%{version}.tar.bz2
-# Source0-md5:	043669306d509faec902d766debbb1ef
+Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-icon-theme/2.9/%{name}-%{version}.tar.bz2
+# Source0-md5:	a73965d6d39666c0583f6baac36ea44a
 URL:		http://www.gnome.org/
 BuildRequires:	autoconf >= 2.53
 BuildRequires:	automake
@@ -32,7 +32,6 @@ intltoolize --force
 %{__automake}
 %configure \
 	--disable-hicolor-check
-
 %{__make}
 
 %install
@@ -46,6 +45,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc ChangeLog NEWS
 %{_iconsdir}/gnome
 %{_iconsdir}/hicolor/*/*/*.png
 %{_iconsdir}/hicolor/*/stock/*/*.png
