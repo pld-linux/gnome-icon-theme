@@ -1,5 +1,5 @@
 Summary: 	Default icon themes for Gnome2 enviroment
-Summary(pl):	Domyslne tematy icon dla srodowiska Gnome2
+Summary(pl):	Domy¶lne motywy ikon dla ¶rodowiska Gnome2
 Name:		gnome-icon-theme
 Version:	0.1.0
 Release:	1
@@ -14,10 +14,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_prefix		/usr/X11R6
 
 %description
-Default icon themes for Gnome2 enviroment
+Default icon themes for Gnome2 enviroment.
 
 %description -l pl
-Domyslne tematy icon dla srodowiska Gnome2
+Domy¶lne motywy ikon dla ¶rodowiska Gnome2.
 
 %prep
 %setup -q
