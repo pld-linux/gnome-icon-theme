@@ -1,5 +1,5 @@
-Summary:	Default icon themes for Gnome2 enviroment
-Summary(pl):	Domy¶lne motywy ikon dla ¶rodowiska Gnome2
+Summary:	Default icon themes for GNOME2 enviroment
+Summary(pl):	Domy¶lne motywy ikon dla ¶rodowiska GNOME2
 Name:		gnome-icon-theme
 Version:	1.0.7
 Release:	1
@@ -12,10 +12,10 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Default icon themes for Gnome2 enviroment.
+Default icon themes for GNOME2 enviroment.
 
 %description -l pl
-Domy¶lne motywy ikon dla ¶rodowiska Gnome2.
+Domy¶lne motywy ikon dla ¶rodowiska GNOME2.
 
 %prep
 %setup -q
