@@ -13,7 +13,6 @@ BuildRequires:	intltool
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	glib2-devel >= 2.3.0
-BuildRequires:	hicolor-icon-theme
 Requires:	hicolor-icon-theme
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -34,7 +33,9 @@ intltoolize --force
 %{__aclocal}
 %{__autoconf}
 %{__automake}
-%configure 
+%configure \
+	--disable-hicolor-check
+
 %{__make}
 
 %install
