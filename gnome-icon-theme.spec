@@ -9,10 +9,10 @@ Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/1.2/%{name}-%{version}.t
 # Source0-md5:	9f1fa89cfae54213347a8e3fb05a1686
 Patch0:		%{name}-locale-names.patch
 URL:		http://www.gnome.org/
-BuildRequires:	intltool
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	glib2-devel >= 1:2.4.0
+BuildRequires:	intltool
 Requires:	hicolor-icon-theme
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -50,7 +50,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%{_datadir}/icons/hicolor/*/*/*.png
-%{_datadir}/icons/hicolor/*/stock/*/*.png
-%{_datadir}/icons/gnome
+%{_iconsdir}/gnome
+%{_iconsdir}/hicolor/*/*/*.png
+%{_iconsdir}/hicolor/*/stock/*/*.png
 %{_pkgconfigdir}/*.pc
