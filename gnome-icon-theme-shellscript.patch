@@ -1,0 +1,11 @@
+--- gnome-icon-theme-1.2.0/48x48/mimetypes/Makefile.am~	Mon Mar  8 12:10:24 2004
++++ gnome-icon-theme-1.2.0/48x48/mimetypes/Makefile.am	Mon Mar 29 00:21:17 2004
+@@ -188,6 +188,7 @@
+ 	ln -sf gnome-mime-text-x-chdr.png $(DESTDIR)$(icondir)/gnome-mime-text-x-c-header.png
+ 	ln -sf gnome-mime-text-x-csrc.png $(DESTDIR)$(icondir)/gnome-mime-text-x-c.png
+ 	ln -sf gnome-mime-text-x-c++src.png $(DESTDIR)$(icondir)/gnome-mime-text-x-c++.png
+-	ln -sf gnome-mime-text-x-shellscript.png $(DESTDIR)$(icondir)/gnome-mime-text-x-sh.png
++	ln -sf gnome-mime-application-x-shellscript.png $(DESTDIR)$(icondir)/gnome-mime-text-x-shellscript.png
++	ln -sf gnome-mime-application-x-shellscript.png $(DESTDIR)$(icondir)/gnome-mime-text-x-sh.png
+ 
+ EXTRA_DIST = $(icon_DATA)
