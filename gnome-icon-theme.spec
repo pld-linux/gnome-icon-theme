@@ -15,7 +15,6 @@ BuildRequires:	automake
 BuildRequires:	glib2-devel >= 1:2.4.4
 BuildRequires:	intltool
 Requires:	hicolor-icon-theme
-BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
