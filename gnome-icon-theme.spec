@@ -1,25 +1,26 @@
-Summary:	Default icon themes for GNOME2 enviroment
-Summary(pl):	Domy¶lne motywy ikon dla ¶rodowiska GNOME2
+Summary:	Default icon themes for GNOME enviroment
+Summary(pl):	Domy¶lne motywy ikon dla ¶rodowiska GNOME
 Name:		gnome-icon-theme
-Version:	2.12.1
+Version:	2.13.5.1
 Release:	1
 License:	GPL
 Group:		Themes
-Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-icon-theme/2.12/%{name}-%{version}.tar.bz2
-# Source0-md5:	a5401d6f085979fe6601f2241743af86
+Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-icon-theme/2.13/%{name}-%{version}.tar.bz2
+# Source0-md5:	2cf2407a9c964a84129853a133d38086
 URL:		http://www.gnome.org/
 BuildRequires:	autoconf >= 2.53
 BuildRequires:	automake
 BuildRequires:	glib2-devel >= 1:2.8.1
+BuildRequires:	gtk+2 >= 2:2.8.0
+BuildRequires:	icon-naming-utils >= 0.6.5
 BuildRequires:	intltool
-Requires:	hicolor-icon-theme
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Default icon themes for GNOME2 enviroment.
+Default icon themes for GNOME enviroment.
 
 %description -l pl
-Domy¶lne motywy ikon dla ¶rodowiska GNOME2.
+Domy¶lne motywy ikon dla ¶rodowiska GNOME.
 
 %prep
 %setup -q
@@ -30,8 +31,7 @@ Domy¶lne motywy ikon dla ¶rodowiska GNOME2.
 %{__aclocal}
 %{__autoconf}
 %{__automake}
-%configure \
-	--disable-hicolor-check
+%configure
 %{__make}
 
 %install
@@ -41,6 +41,8 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	pkgconfigdir='%{_pkgconfigdir}'
 
+gtk-update-icon-cache -ft $RPM_BUILD_ROOT%{_iconsdir}/gnome
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -48,6 +50,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc ChangeLog NEWS
 %{_iconsdir}/gnome
-%{_iconsdir}/hicolor/*/*/*.*
-%{_iconsdir}/hicolor/*/stock/*/*.png
 %{_pkgconfigdir}/*.pc
