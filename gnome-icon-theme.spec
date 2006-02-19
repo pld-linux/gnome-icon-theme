@@ -12,7 +12,8 @@ BuildRequires:	autoconf >= 2.53
 BuildRequires:	automake
 BuildRequires:	glib2-devel >= 1:2.8.1
 BuildRequires:	gtk+2 >= 2:2.8.0
-BuildRequires:	icon-naming-utils >= 0.6.7
+# for future use (present only in 2.13.x)
+#BuildRequires:	icon-naming-utils >= 0.6.7
 BuildRequires:	intltool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
