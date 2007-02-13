@@ -1,5 +1,5 @@
 Summary:	Default icon themes for GNOME enviroment
-Summary(pl.UTF-8):   Domyślne motywy ikon dla środowiska GNOME
+Summary(pl.UTF-8):	Domyślne motywy ikon dla środowiska GNOME
 Name:		gnome-icon-theme
 Version:	2.16.1
 Release:	1
