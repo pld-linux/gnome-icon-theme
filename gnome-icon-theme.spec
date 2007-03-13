@@ -1,19 +1,23 @@
 Summary:	Default icon themes for GNOME enviroment
 Summary(pl.UTF-8):	Domyślne motywy ikon dla środowiska GNOME
 Name:		gnome-icon-theme
-Version:	2.16.1
+Version:	2.18.0
 Release:	1
 License:	GPL
 Group:		Themes
-Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-icon-theme/2.16/%{name}-%{version}.tar.bz2
-# Source0-md5:	4a5da64a6084fdddf056e553a929c169
+Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-icon-theme/2.18/%{name}-%{version}.tar.bz2
+# Source0-md5:	0b9aa12c473e0be61dc324b059c106e3
 URL:		http://www.gnome.org/
 BuildRequires:	autoconf >= 2.53
 BuildRequires:	automake
-BuildRequires:	gtk+2 >= 2:2.10.6
-BuildRequires:	icon-naming-utils >= 0.8.1
-BuildRequires:	intltool
+BuildRequires:	gtk+2 >= 2:2.10.10
+BuildRequires:	icon-naming-utils >= 0.8.2
+BuildRequires:	intltool >= 0.35.5
+BuildRequires:	pkgconfig >= 1:0.19
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+%define		_pkgconfigdir	%{_datadir}/pkgconfig
 
 %description
 Default icon themes for GNOME enviroment.
@@ -37,8 +41,7 @@ Domyślne motywy ikon dla środowiska GNOME.
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT \
-	pkgconfigdir='%{_pkgconfigdir}'
+	DESTDIR=$RPM_BUILD_ROOT
 
 gtk-update-icon-cache -ft $RPM_BUILD_ROOT%{_iconsdir}/gnome
 
@@ -47,6 +50,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc ChangeLog NEWS
+%doc AUTHORS ChangeLog NEWS TODO
 %{_iconsdir}/gnome
 %{_pkgconfigdir}/*.pc
