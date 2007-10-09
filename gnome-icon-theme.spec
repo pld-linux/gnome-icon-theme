@@ -1,4 +1,4 @@
-Summary:	Default icon themes for GNOME enviroment
+Summary:	Default icon themes for GNOME environment
 Summary(pl.UTF-8):	Domyślne motywy ikon dla środowiska GNOME
 Name:		gnome-icon-theme
 Version:	2.20.0
@@ -20,7 +20,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_pkgconfigdir	%{_datadir}/pkgconfig
 
 %description
-Default icon themes for GNOME enviroment.
+Default icon themes for GNOME environment.
 
 %description -l pl.UTF-8
 Domyślne motywy ikon dla środowiska GNOME.
