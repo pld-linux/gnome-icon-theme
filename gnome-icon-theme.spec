@@ -1,12 +1,12 @@
 Summary:	Default icon themes for GNOME environment
 Summary(pl.UTF-8):	Domyślne motywy ikon dla środowiska GNOME
 Name:		gnome-icon-theme
-Version:	2.20.0
+Version:	2.21.4
 Release:	1
 License:	GPL
 Group:		Themes
-Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-icon-theme/2.20/%{name}-%{version}.tar.bz2
-# Source0-md5:	56857a6d5f26c236b48fcf6760549d1b
+Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-icon-theme/2.21/%{name}-%{version}.tar.bz2
+# Source0-md5:	3a757936db7adc3ab6eb05f95be5a1ec
 URL:		http://www.gnome.org/
 BuildRequires:	autoconf >= 2.53
 BuildRequires:	automake
