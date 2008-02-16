@@ -2,7 +2,7 @@ Summary:	Default icon themes for GNOME environment
 Summary(pl.UTF-8):	Domyślne motywy ikon dla środowiska GNOME
 Name:		gnome-icon-theme
 Version:	2.20.0
-Release:	1
+Release:	2
 License:	GPL
 Group:		Themes
 Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-icon-theme/2.20/%{name}-%{version}.tar.bz2
@@ -42,6 +42,13 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+# add missing icon dirs, fixes broken directory deps
+install -d $RPM_BUILD_ROOT%{_iconsdir}/gnome/22x22/{filesystems,stock/{chart,code,data,document,emoticons,form,generic,image,io,media,navigation,net,object,table,text}}
+install -d $RPM_BUILD_ROOT%{_iconsdir}/gnome/24x24/stock/emoticons
+install -d $RPM_BUILD_ROOT%{_iconsdir}/gnome/32x32/{filesystems,stock/{chart,code,data,document,emoticons,form,image,io,media,navigation,net,object,table,text}}
+install -d $RPM_BUILD_ROOT%{_iconsdir}/gnome/48x48/{categories,emotes,mimetypes,places,status,stock/{chart,emoticons,form,image,media,navigation,object,table,text}}
+install -d $RPM_BUILD_ROOT%{_iconsdir}/gnome/scalable/{animations,filesystems,stock/{chart,code,data,document,emoticons,form,image,io,media,navigation,net,object,table,text}}
 
 gtk-update-icon-cache -ft $RPM_BUILD_ROOT%{_iconsdir}/gnome
 
