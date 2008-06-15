@@ -12,7 +12,7 @@ BuildRequires:	autoconf >= 2.53
 BuildRequires:	automake >= 1:1.9
 BuildRequires:	gtk+2 >= 2:2.12.8
 BuildRequires:	icon-naming-utils >= 0.8.7
-BuildRequires:	intltool >= 0.36.0
+BuildRequires:	intltool >= 0.40.0
 BuildRequires:	pkgconfig >= 1:0.19
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
