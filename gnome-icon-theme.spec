@@ -6,7 +6,7 @@ Release:	1
 License:	GPL
 Group:		Themes
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-icon-theme/2.24/%{name}-%{version}.tar.bz2
-# Source0-md5:	6ca28f6a75ac0d5bb2b0ecebf20d37d1
+# Source0-md5:	17ba571e5dd83434dc5b2b06ada7b56e
 URL:		http://www.gnome.org/
 BuildRequires:	autoconf >= 2.53
 BuildRequires:	automake >= 1:1.9
