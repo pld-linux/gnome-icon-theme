@@ -10,6 +10,8 @@ Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-icon-theme/2.28/%{name}-%{
 URL:		http://www.gnome.org/
 BuildRequires:	autoconf >= 2.53
 BuildRequires:	automake >= 1:1.9
+BuildRequires:	gettext-devel
+BuildRequires:	glib2-devel
 BuildRequires:	gtk+2 >= 2:2.14.0
 BuildRequires:	icon-naming-utils >= 0.8.7
 BuildRequires:	intltool >= 0.40.0
