@@ -17,7 +17,7 @@ BuildRequires:	icon-naming-utils >= 0.8.7
 BuildRequires:	intltool >= 0.40.0
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	rpmbuild(macros) >= 1.311
-Requires(post):	gtk+2
+Requires(post):	gtk-update-icon-cache
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
