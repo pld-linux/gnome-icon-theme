@@ -38,13 +38,13 @@ Domyślne motywy ikon dla środowiska GNOME.
 %{__aclocal}
 %{__autoconf}
 %{__automake}
-%configure
+%configure \
+	GTK_UPDATE_ICON_CACHE=/bin/true
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 %{__make} install \
-	GTK_UPDATE_ICON_CACHE="true" \
 	install_sh="install -p" \
 	DESTDIR=$RPM_BUILD_ROOT
 
