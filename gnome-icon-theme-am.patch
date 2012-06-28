@@ -1,0 +1,11 @@
+--- src/Makefile.am.orig	2010-05-26 14:25:06.000000000 +0000
++++ src/Makefile.am	2012-06-28 18:18:49.159183938 +0000
+@@ -8,7 +8,7 @@
+ 		echo -e "Going to copy files for $$size"; \
+ 		for file in `cd $(top_srcdir)/$(SVGOUTDIR)/$$size && find . -name "*.png"`; do \
+ 			context="`dirname $$file`"; \
+-			$(mkdir_p) $(DESTDIR)$(themedir)/$$size/$$context; \
++			$(MKDIR_P) $(DESTDIR)$(themedir)/$$size/$$context; \
+ 			$(install_sh_DATA) $(top_srcdir)/$(SVGOUTDIR)/$$size/$$file $(DESTDIR)$(themedir)/$$size/$$file; \
+ 		done; \
+ 	done; \
