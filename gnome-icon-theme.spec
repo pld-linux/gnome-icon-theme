@@ -3,7 +3,7 @@ Summary(pl.UTF-8):	Domyślne motywy ikon dla środowiska GNOME
 Name:		gnome-icon-theme
 Version:	3.6.2
 Release:	1
-License:	GPL
+License:	LGPL v3 or CC-BY-SA v3.0
 Group:		Themes
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-icon-theme/3.6/%{name}-%{version}.tar.xz
 # Source0-md5:	c7bf0c7cc3ca0c9d4ac120aedb9ab8af
@@ -61,9 +61,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS README TODO
+%doc AUTHORS COPYING NEWS README TODO
 %dir %{_iconsdir}/gnome
 %{_iconsdir}/gnome/index.theme
-%{_iconsdir}/gnome/[0-9]*x*
+%{_iconsdir}/gnome/[0-9]*x[0-9]*
 %ghost %{_iconsdir}/gnome/icon-theme.cache
 %{_pkgconfigdir}/gnome-icon-theme.pc
