@@ -1,12 +1,12 @@
 Summary:	Default icon themes for GNOME environment
 Summary(pl.UTF-8):	Domyślne motywy ikon dla środowiska GNOME
 Name:		gnome-icon-theme
-Version:	3.6.2
+Version:	3.8.0
 Release:	1
 License:	LGPL v3 or CC-BY-SA v3.0
 Group:		Themes
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-icon-theme/3.6/%{name}-%{version}.tar.xz
-# Source0-md5:	c7bf0c7cc3ca0c9d4ac120aedb9ab8af
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-icon-theme/3.8/%{name}-%{version}.tar.xz
+# Source0-md5:	9bd45bea3f5b23bd9872d2148da6fb95
 Patch0:		%{name}-am.patch
 URL:		http://www.gnome.org/
 BuildRequires:	autoconf >= 2.53
