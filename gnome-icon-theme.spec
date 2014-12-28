@@ -11,7 +11,7 @@ Patch0:		%{name}-am.patch
 URL:		http://www.gnome.org/
 BuildRequires:	autoconf >= 2.53
 BuildRequires:	automake >= 1:1.9
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	gtk-update-icon-cache
 BuildRequires:	icon-naming-utils >= 0.8.7
 BuildRequires:	intltool >= 0.40.0
